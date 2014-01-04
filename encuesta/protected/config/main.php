@@ -56,7 +56,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=encuesta',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'minenalinda',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		
