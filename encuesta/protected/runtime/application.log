@@ -1,0 +1,25 @@
+2014/01/04 17:45:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`encuesta`.`respuestas`, CONSTRAINT `IdUsuario` FOREIGN KEY (`IdUsuario`) REFERENCES `usuario` (`Id`)). The SQL statement executed was: DELETE FROM `Usuario` WHERE `Usuario`.`Id`=1.
+in C:\xampp\htdocs\encuesta\protected\controllers\UsuarioController.php (117)
+in C:\xampp\htdocs\encuesta\index.php (13)
+2014/01/04 17:45:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`encuesta`.`respuestas`, CONSTRAINT `IdUsuario` FOREIGN KEY (`IdUsuario`) REFERENCES `usuario` (`Id`)). The SQL statement executed was: DELETE FROM `Usuario` WHERE `Usuario`.`Id`=1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('1')
+#2 C:\xampp\htdocs\encuesta\protected\controllers\UsuarioController.php(117): CActiveRecord->delete()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionDelete()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/delete')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\encuesta\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/encuesta/index.php?ajax=usuario-grid&id=1&r=usuario%2Fdelete
+HTTP_REFERER=http://localhost/encuesta/index.php?r=usuario/admin
+---
