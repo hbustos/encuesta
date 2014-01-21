@@ -7,10 +7,12 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Encuesta',
-
+	'name'=>'Encuesta "Software para la Construcción de la Política de un S.G.S.I."',
+	
 	// preloading 'log' component
 	'preload'=>array('log'),
+	'theme'=>'businessblue',
+	'defaultController'=>'site/index', 
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -56,7 +58,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=encuesta',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'minenalinda',
 			'charset' => 'utf8',
 		),
 		

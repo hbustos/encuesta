@@ -1,6 +1,6 @@
 <?php
 
-class RespuestasController extends Controller
+class PaisController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -65,14 +65,14 @@ class RespuestasController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new respuestas;
+		$model=new Pais;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['respuestas']))
+		if(isset($_POST['Pais']))
 		{
-			$model->attributes=$_POST['respuestas'];
+			$model->attributes=$_POST['Pais'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->Id));
 		}
@@ -93,9 +93,9 @@ class RespuestasController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['respuestas']))
+		if(isset($_POST['Pais']))
 		{
-			$model->attributes=$_POST['respuestas'];
+			$model->attributes=$_POST['Pais'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->Id));
 		}
@@ -129,7 +129,7 @@ class RespuestasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('respuestas');
+		$dataProvider=new CActiveDataProvider('Pais');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -140,10 +140,10 @@ class RespuestasController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new respuestas('search');
+		$model=new Pais('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['respuestas']))
-			$model->attributes=$_GET['respuestas'];
+		if(isset($_GET['Pais']))
+			$model->attributes=$_GET['Pais'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -159,7 +159,7 @@ class RespuestasController extends Controller
 		if($this->_model===null)
 		{
 			if(isset($_GET['id']))
-				$this->_model=respuestas::model()->findbyPk($_GET['id']);
+				$this->_model=Pais::model()->findbyPk($_GET['id']);
 			if($this->_model===null)
 				throw new CHttpException(404,'The requested page does not exist.');
 		}
@@ -172,7 +172,7 @@ class RespuestasController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='respuestas-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='pais-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

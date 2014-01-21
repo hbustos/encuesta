@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->cinco); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('seis')); ?>:</b>
 	<?php echo CHtml::encode($data->seis); ?>
 	<br />
@@ -48,7 +47,4 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('diez')); ?>:</b>
 	<?php echo CHtml::encode($data->diez); ?>
 	<br />
-
-	*/ ?>
-
 </div>

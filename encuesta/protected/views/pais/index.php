@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Respuestas',
+	'Paises',
 );
 
 $this->menu=array(
-	array('label'=>'Create respuestas', 'url'=>array('create')),
-	array('label'=>'Manage respuestas', 'url'=>array('admin')),
+	array('label'=>'Create Pais', 'url'=>array('create')),
+	array('label'=>'Manage Pais', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Respuestas</h1>
+<h1>Paises</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

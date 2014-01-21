@@ -5,11 +5,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Respuestas', 'url'=>array('index')),
-	array('label'=>'Manage Respuestas', 'url'=>array('admin')),
+	array('label'=>'List respuestas', 'url'=>array('index')),
+	array('label'=>'Manage respuestas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Respuestas</h1>
+<h1>Create respuestas</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

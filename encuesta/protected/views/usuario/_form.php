@@ -5,7 +5,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -22,13 +22,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'CorreoElectronico'); ?>
+		<?php echo $form->labelEx($model,'Correo Electronico'); ?>
 		<?php echo $form->textField($model,'CorreoElectronico',array('size'=>60,'maxlength'=>200)); ?>
 		<?php echo $form->error($model,'CorreoElectronico'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

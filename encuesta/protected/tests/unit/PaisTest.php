@@ -1,9 +1,9 @@
 <?php
 
-class respuestasTest extends CDbTestCase
+class PaisTest extends CDbTestCase
 {
 	public $fixtures=array(
-		'respuestases'=>'respuestas',
+		'paises'=>'Pais',
 	);
 
 	public function testCreate()

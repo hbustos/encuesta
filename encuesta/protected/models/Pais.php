@@ -1,30 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "respuestas".
+ * This is the model class for table "Pais".
  *
- * The followings are the available columns in table 'respuestas':
+ * The followings are the available columns in table 'Pais':
  * @property integer $Id
- * @property integer $IdUsuario
- * @property integer $uno
- * @property integer $dos
- * @property integer $tres
- * @property integer $cuatro
- * @property integer $cinco
- * @property integer $seis
- * @property integer $siete
- * @property integer $ocho
- * @property integer $nueve
- * @property integer $diez
+ * @property string $Pais
  */
-class respuestas extends CActiveRecord
+class Pais extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'respuestas';
+		return 'Pais';
 	}
 
 	/**
@@ -35,11 +25,11 @@ class respuestas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('IdUsuario, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez', 'required'),
-			array('IdUsuario, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez', 'numerical', 'integerOnly'=>true),
+			array('Pais', 'required'),
+			array('Pais', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('Id, IdUsuario, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez', 'safe', 'on'=>'search'),
+			array('Id, Pais', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,7 +41,6 @@ class respuestas extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idUsuario' => array(self::BELONGS_TO, 'Usuario', 'IdUsuario'),
 		);
 	}
 
@@ -62,17 +51,7 @@ class respuestas extends CActiveRecord
 	{
 		return array(
 			'Id' => 'Id',
-			'IdUsuario' => 'Id Usuario',
-			'uno' => 'Uno',
-			'dos' => 'Dos',
-			'tres' => 'Tres',
-			'cuatro' => 'Cuatro',
-			'cinco' => 'Cinco',
-			'seis' => 'Seis',
-			'siete' => 'Siete',
-			'ocho' => 'Ocho',
-			'nueve' => 'Nueve',
-			'diez' => 'Diez',
+			'Pais' => 'Pais',
 		);
 	}
 
@@ -96,36 +75,16 @@ class respuestas extends CActiveRecord
 
 		$criteria->compare('Id',$this->Id);
 
-		$criteria->compare('IdUsuario',$this->IdUsuario);
+		$criteria->compare('Pais',$this->Pais,true);
 
-		$criteria->compare('uno',$this->uno);
-
-		$criteria->compare('dos',$this->dos);
-
-		$criteria->compare('tres',$this->tres);
-
-		$criteria->compare('cuatro',$this->cuatro);
-
-		$criteria->compare('cinco',$this->cinco);
-
-		$criteria->compare('seis',$this->seis);
-
-		$criteria->compare('siete',$this->siete);
-
-		$criteria->compare('ocho',$this->ocho);
-
-		$criteria->compare('nueve',$this->nueve);
-
-		$criteria->compare('diez',$this->diez);
-
-		return new CActiveDataProvider('respuestas', array(
+		return new CActiveDataProvider('Pais', array(
 			'criteria'=>$criteria,
 		));
 	}
 
 	/**
 	 * Returns the static model of the specified AR class.
-	 * @return respuestas the static model class
+	 * @return Pais the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
