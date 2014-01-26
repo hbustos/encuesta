@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-01-2014 a las 23:04:54
+-- Tiempo de generación: 26-01-2014 a las 15:51:40
 -- Versión del servidor: 5.5.34
 -- Versión de PHP: 5.4.22
 
@@ -290,10 +290,13 @@ INSERT INTO `pais` (`Id`, `Pais`) VALUES
 CREATE TABLE IF NOT EXISTS `respuestas` (
   `Id` int(100) NOT NULL AUTO_INCREMENT,
   `IdUsuario` int(100) NOT NULL,
-  `uno` tinyint(1) NOT NULL,
+  `uno` tinyint(4) DEFAULT NULL,
   `dos` tinyint(1) NOT NULL,
+  `dos_uno` text COLLATE utf8_spanish2_ci,
   `tres` tinyint(1) NOT NULL,
+  `tres_uno` text COLLATE utf8_spanish2_ci,
   `cuatro` tinyint(1) NOT NULL,
+  `cuatro_uno` text COLLATE utf8_spanish2_ci NOT NULL,
   `cinco` tinyint(1) NOT NULL,
   `seis` tinyint(1) NOT NULL,
   `siete` tinyint(1) NOT NULL,
@@ -304,14 +307,14 @@ CREATE TABLE IF NOT EXISTS `respuestas` (
   PRIMARY KEY (`Id`),
   KEY `IdUsuario` (`IdUsuario`),
   KEY `IdPais` (`IdPais`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `respuestas`
 --
 
-INSERT INTO `respuestas` (`Id`, `IdUsuario`, `uno`, `dos`, `tres`, `cuatro`, `cinco`, `seis`, `siete`, `ocho`, `nueve`, `diez`, `IdPais`) VALUES
-(1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+INSERT INTO `respuestas` (`Id`, `IdUsuario`, `uno`, `dos`, `dos_uno`, `tres`, `tres_uno`, `cuatro`, `cuatro_uno`, `cinco`, `seis`, `siete`, `ocho`, `nueve`, `diez`, `IdPais`) VALUES
+(1, 1, 0, 0, NULL, 0, NULL, 0, '', 0, 0, 0, 0, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -325,14 +328,15 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `Apellidos` varchar(200) COLLATE utf8_spanish2_ci NOT NULL,
   `CorreoElectronico` varchar(200) COLLATE utf8_spanish2_ci DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`Id`, `Nombres`, `Apellidos`, `CorreoElectronico`) VALUES
-(1, 'Heiber Francisco', 'Bustos Bustos', 'hfb5@hotmail.com');
+(1, 'Heiber Francisco', 'Bustos Bustos', 'hfb5@hotmail.com'),
+(5, 'Rodrigo', 'Bustos Riveros', 'rocotosbus04@hotmail.com');
 
 --
 -- Restricciones para tablas volcadas
