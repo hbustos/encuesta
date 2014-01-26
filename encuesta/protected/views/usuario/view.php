@@ -13,7 +13,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Usuario #<?php echo $model->Id; ?></h1>
+<h1>Vistas General del Usuario #<?php echo $model->Id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -22,5 +22,10 @@ $this->menu=array(
 		'Nombres',
 		'Apellidos',
 		'CorreoElectronico',
-	),
+	), 
 )); ?>
+&nbsp
+<div class="row">
+		<p><b>Muchas gracias por tu registro! </b></p>  
+		<p> Para iniciar la encuesta haz click <a href="http://localhost/encuesta/index.php?r=respuestas/create">aqui.</a></p>
+	</div>

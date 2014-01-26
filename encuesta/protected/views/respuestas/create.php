@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Respuestases'=>array('index'),
+	'Respuestas'=>array('index'),
 	'Create',
 );
 
@@ -10,6 +10,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create respuestas</h1>
+<h1>Diligenciar Encuesta</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
