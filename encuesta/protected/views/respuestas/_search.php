@@ -26,13 +26,28 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'dos_uno'); ?>
+		<?php echo $form->textArea($model,'dos_uno',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'tres'); ?>
 		<?php echo $form->textField($model,'tres'); ?>
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'tres_uno'); ?>
+		<?php echo $form->textArea($model,'tres_uno',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'cuatro'); ?>
 		<?php echo $form->textField($model,'cuatro'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'cuatro_uno'); ?>
+		<?php echo $form->textArea($model,'cuatro_uno',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row">
@@ -63,6 +78,11 @@
 	<div class="row">
 		<?php echo $form->label($model,'diez'); ?>
 		<?php echo $form->textField($model,'diez'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'IdPais'); ?>
+		<?php echo $form->textField($model,'IdPais'); ?>
 	</div>
 
 	<div class="row buttons">

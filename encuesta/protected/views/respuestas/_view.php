@@ -16,19 +16,31 @@
 	<?php echo CHtml::encode($data->dos); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dos_uno')); ?>:</b>
+	<?php echo CHtml::encode($data->dos_uno); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('tres')); ?>:</b>
 	<?php echo CHtml::encode($data->tres); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('tres_uno')); ?>:</b>
+	<?php echo CHtml::encode($data->tres_uno); ?>
+	<br />
+
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cuatro')); ?>:</b>
 	<?php echo CHtml::encode($data->cuatro); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cuatro_uno')); ?>:</b>
+	<?php echo CHtml::encode($data->cuatro_uno); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cinco')); ?>:</b>
 	<?php echo CHtml::encode($data->cinco); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('seis')); ?>:</b>
 	<?php echo CHtml::encode($data->seis); ?>
 	<br />
@@ -47,6 +59,10 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('diez')); ?>:</b>
 	<?php echo CHtml::encode($data->diez); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('IdPais')); ?>:</b>
+	<?php echo CHtml::encode($data->IdPais); ?>
 	<br />
 
 	*/ ?>

@@ -8,14 +8,18 @@
  * @property integer $IdUsuario
  * @property integer $uno
  * @property integer $dos
+ * @property string $dos_uno
  * @property integer $tres
+ * @property string $tres_uno
  * @property integer $cuatro
+ * @property string $cuatro_uno
  * @property integer $cinco
  * @property integer $seis
  * @property integer $siete
  * @property integer $ocho
  * @property integer $nueve
  * @property integer $diez
+ * @property integer $IdPais
  */
 class Respuestas extends CActiveRecord
 {
@@ -35,11 +39,12 @@ class Respuestas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('IdUsuario, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez', 'required'),
-			array('IdUsuario, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez', 'numerical', 'integerOnly'=>true),
+			array('IdUsuario, dos, tres, cuatro, cuatro_uno, cinco, seis, siete, ocho, nueve, diez, IdPais', 'required'),
+			array('IdUsuario, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, IdPais', 'numerical', 'integerOnly'=>true),
+			array('dos_uno, tres_uno', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('Id, IdUsuario, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez', 'safe', 'on'=>'search'),
+			array('Id, IdUsuario, uno, dos, dos_uno, tres, tres_uno, cuatro, cuatro_uno, cinco, seis, siete, ocho, nueve, diez, IdPais', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,6 +56,7 @@ class Respuestas extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idPais' => array(self::BELONGS_TO, 'Pais', 'IdPais'),
 			'idUsuario' => array(self::BELONGS_TO, 'Usuario', 'IdUsuario'),
 		);
 	}
@@ -65,14 +71,18 @@ class Respuestas extends CActiveRecord
 			'IdUsuario' => 'Id Usuario',
 			'uno' => 'Uno',
 			'dos' => 'Dos',
+			'dos_uno' => 'Dos Uno',
 			'tres' => 'Tres',
+			'tres_uno' => 'Tres Uno',
 			'cuatro' => 'Cuatro',
+			'cuatro_uno' => 'Cuatro Uno',
 			'cinco' => 'Cinco',
 			'seis' => 'Seis',
 			'siete' => 'Siete',
 			'ocho' => 'Ocho',
 			'nueve' => 'Nueve',
 			'diez' => 'Diez',
+			'IdPais' => 'Id Pais',
 		);
 	}
 
@@ -102,9 +112,15 @@ class Respuestas extends CActiveRecord
 
 		$criteria->compare('dos',$this->dos);
 
+		$criteria->compare('dos_uno',$this->dos_uno,true);
+
 		$criteria->compare('tres',$this->tres);
 
+		$criteria->compare('tres_uno',$this->tres_uno,true);
+
 		$criteria->compare('cuatro',$this->cuatro);
+
+		$criteria->compare('cuatro_uno',$this->cuatro_uno,true);
 
 		$criteria->compare('cinco',$this->cinco);
 
@@ -117,6 +133,8 @@ class Respuestas extends CActiveRecord
 		$criteria->compare('nueve',$this->nueve);
 
 		$criteria->compare('diez',$this->diez);
+
+		$criteria->compare('IdPais',$this->IdPais);
 
 		return new CActiveDataProvider('Respuestas', array(
 			'criteria'=>$criteria,

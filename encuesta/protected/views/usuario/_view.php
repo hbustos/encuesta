@@ -15,6 +15,4 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('CorreoElectronico')); ?>:</b>
 	<?php echo CHtml::encode($data->CorreoElectronico); ?>
 	<br />
-
-
 </div>
