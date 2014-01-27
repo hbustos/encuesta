@@ -65,14 +65,14 @@ class RespuestasController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Respuestas;
+		$model=new respuestas;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Respuestas']))
+		if(isset($_POST['respuestas']))
 		{
-			$model->attributes=$_POST['Respuestas'];
+			$model->attributes=$_POST['respuestas'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->Id));
 		}
@@ -93,9 +93,9 @@ class RespuestasController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Respuestas']))
+		if(isset($_POST['respuestas']))
 		{
-			$model->attributes=$_POST['Respuestas'];
+			$model->attributes=$_POST['respuestas'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->Id));
 		}
@@ -129,7 +129,7 @@ class RespuestasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Respuestas');
+		$dataProvider=new CActiveDataProvider('respuestas');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -140,10 +140,10 @@ class RespuestasController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Respuestas('search');
+		$model=new respuestas('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Respuestas']))
-			$model->attributes=$_GET['Respuestas'];
+		if(isset($_GET['respuestas']))
+			$model->attributes=$_GET['respuestas'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -159,7 +159,7 @@ class RespuestasController extends Controller
 		if($this->_model===null)
 		{
 			if(isset($_GET['id']))
-				$this->_model=Respuestas::model()->findbyPk($_GET['id']);
+				$this->_model=respuestas::model()->findbyPk($_GET['id']);
 			if($this->_model===null)
 				throw new CHttpException(404,'The requested page does not exist.');
 		}

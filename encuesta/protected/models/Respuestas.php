@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "Respuestas".
+ * This is the model class for table "respuestas".
  *
- * The followings are the available columns in table 'Respuestas':
+ * The followings are the available columns in table 'respuestas':
  * @property integer $Id
  * @property integer $IdUsuario
  * @property integer $uno
@@ -21,14 +21,14 @@
  * @property integer $diez
  * @property integer $IdPais
  */
-class Respuestas extends CActiveRecord
+class respuestas extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'Respuestas';
+		return 'respuestas';
 	}
 
 	/**
@@ -134,16 +134,20 @@ class Respuestas extends CActiveRecord
 
 		$criteria->compare('diez',$this->diez);
 
+<<<<<<< HEAD
 		$criteria->compare('IdPais',$this->IdPais);
 
 		return new CActiveDataProvider('Respuestas', array(
+=======
+		return new CActiveDataProvider('respuestas', array(
+>>>>>>> 3e10e8c595248dc8f1428b7999ab365742db4674
 			'criteria'=>$criteria,
 		));
 	}
 
 	/**
 	 * Returns the static model of the specified AR class.
-	 * @return Respuestas the static model class
+	 * @return respuestas the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

@@ -60,6 +60,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('diez')); ?>:</b>
 	<?php echo CHtml::encode($data->diez); ?>
 	<br />
+<<<<<<< HEAD
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('IdPais')); ?>:</b>
 	<?php echo CHtml::encode($data->IdPais); ?>
@@ -67,4 +68,6 @@
 
 	*/ ?>
 
+=======
+>>>>>>> 3e10e8c595248dc8f1428b7999ab365742db4674
 </div>

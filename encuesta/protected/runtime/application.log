@@ -987,6 +987,7 @@ Stack trace:
 REQUEST_URI=/encuesta/index.php?r=respuestas/create
 HTTP_REFERER=http://localhost/encuesta/index.php?r=respuestas/create
 ---
+<<<<<<< HEAD
 2014/01/26 15:58:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "respuesta/create".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('respuesta/creat...')
@@ -1103,3 +1104,5 @@ Stack trace:
 REQUEST_URI=/encuesta/index.php?r=respuestas/create
 HTTP_REFERER=http://localhost/encuesta/index.php?r=respuestas/create
 ---
+=======
+>>>>>>> 3e10e8c595248dc8f1428b7999ab365742db4674
