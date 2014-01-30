@@ -32,11 +32,11 @@ class RespuestasController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('create','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','admin'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -73,6 +73,7 @@ class RespuestasController extends Controller
 		if(isset($_POST['respuestas']))
 		{
 			$model->attributes=$_POST['respuestas'];
+			$model->IdUsuario = $_POST['idUser'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->Id));
 		}

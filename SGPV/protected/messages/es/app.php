@@ -1,0 +1,20 @@
+<?php
+return array(
+	'Name'=>'Nombre',
+	'Create'=>'Crear',
+	'Manage'=>'Administrar',
+	'View'=>'Ver',
+	'List'=>'Listar',
+	'Update'=>'Actualizar',
+	'Delete'=>'Borrar',
+	'Spanish'=>'Español',
+	'Report'=>'Reporte',
+	'English'=>'Ingles',
+	'Operations'=>'Operaciones',
+	'Fields with'=>'Campos con',
+	'are required'=>'son requridos',
+	'Advanced Search'=>'Busqueda Avanzada',
+	'Remember me next time'=>'Recordarme la próxima vez',
+	'You may optionally enter a comparison operator'=>'Opcionalmente usted puede ingresar un operador de comparación',
+	'at the beginning of each of your search values to specify how the comparison should be done'=>'al inicio de cada valor de busqueda',
+);

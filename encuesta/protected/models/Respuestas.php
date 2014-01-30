@@ -134,13 +134,10 @@ class respuestas extends CActiveRecord
 
 		$criteria->compare('diez',$this->diez);
 
-<<<<<<< HEAD
 		$criteria->compare('IdPais',$this->IdPais);
 
 		return new CActiveDataProvider('Respuestas', array(
-=======
-		return new CActiveDataProvider('respuestas', array(
->>>>>>> 3e10e8c595248dc8f1428b7999ab365742db4674
+
 			'criteria'=>$criteria,
 		));
 	}

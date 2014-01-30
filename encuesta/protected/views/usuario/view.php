@@ -27,5 +27,5 @@ $this->menu=array(
 &nbsp
 <div class="row">
 		<p><b>Muchas gracias por tu registro! </b></p>  
-		<p> Para iniciar la encuesta haz click <a href="http://localhost/encuesta/index.php?r=respuestas/create">aqui.</a></p>
+		<p> Para iniciar la encuesta haz click <a href="http://localhost/encuesta/index.php?r=respuestas/create&idUser=<?php echo $model->Id ;?>">aqui.</a></p>
 	</div>
