@@ -39,7 +39,7 @@ class respuestas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('IdUsuario, dos, tres, cuatro, cuatro_uno, cinco, seis, siete, ocho, nueve, diez, IdPais', 'required'),
+			array('IdUsuario, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, IdPais', 'required'),
 			array('IdUsuario, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, IdPais', 'numerical', 'integerOnly'=>true),
 			array('dos_uno, tres_uno', 'safe'),
 			// The following rule is used by search().
@@ -119,21 +119,13 @@ class respuestas extends CActiveRecord
 		$criteria->compare('tres_uno',$this->tres_uno,true);
 
 		$criteria->compare('cuatro',$this->cuatro);
-
 		$criteria->compare('cuatro_uno',$this->cuatro_uno,true);
-
 		$criteria->compare('cinco',$this->cinco);
-
 		$criteria->compare('seis',$this->seis);
-
 		$criteria->compare('siete',$this->siete);
-
 		$criteria->compare('ocho',$this->ocho);
-
 		$criteria->compare('nueve',$this->nueve);
-
 		$criteria->compare('diez',$this->diez);
-
 		$criteria->compare('IdPais',$this->IdPais);
 
 		return new CActiveDataProvider('Respuestas', array(
@@ -150,4 +142,17 @@ class respuestas extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	        public function beforeSave()
+        {
+                if(parent::beforeSave())
+                {
+                        $this->dos_uno = strtoupper($this->dos_uno);
+                        $this->tres_uno = strtoupper($this->tres_uno);                        
+                        
+                        
+                        return true;
+                }
+                return false;
+        }
 }

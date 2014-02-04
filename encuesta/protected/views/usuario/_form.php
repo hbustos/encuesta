@@ -11,13 +11,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Nombres'); ?>
-		<?php echo $form->textField($model,'Nombres',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->textField($model,'Nombres',array('size'=>60,'maxlength'=>200,'style'=>'text-transform: uppercase')); ?>
 		<?php echo $form->error($model,'Nombres'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Apellidos'); ?>
-		<?php echo $form->textField($model,'Apellidos',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->textField($model,'Apellidos',array('size'=>60,'maxlength'=>200,'style'=>'text-transform: uppercase')); ?>
 		<?php echo $form->error($model,'Apellidos'); ?>
 	</div>
 

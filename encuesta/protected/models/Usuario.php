@@ -95,4 +95,17 @@ class Usuario extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	
+	        public function beforeSave()
+        {
+                if(parent::beforeSave())
+                {
+                        $this->Nombres = strtoupper($this->Nombres);                     
+                        $this->Apellidos = strtoupper($this->Apellidos);                       
+                        
+                        return true;
+                }
+                return false;
+        }
 }

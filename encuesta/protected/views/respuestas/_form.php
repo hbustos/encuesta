@@ -31,7 +31,7 @@
 		<?php echo $form->radioButtonList($model,'dos',array('1'=>'Si','0'=>'No'),array('separator'=>' ','labelOptions'=>array('style'=>'display:inline'))); ?>
 		<?php echo $form->error($model,'dos'); ?>
 		<p><b><pre>       2.1 En caso de respuesta negativa, por favor explicanos el porque?<b/></br>
-		<?php echo $form->textField($model,'dos_uno',array('size'=>74,'maxlength'=>300, 'width'=> 20)); ?>
+		<?php echo $form->textField($model,'dos_uno',array('size'=>74,'maxlength'=>300, 'width'=> 20,'style'=>'text-transform: uppercase')); ?>
 		<?php echo $form->error($model,'dos_uno'); ?></p></pre>
 	</div>
 &nbsp
@@ -40,7 +40,7 @@
 		<?php echo $form->radioButtonList($model,'tres',array('1'=>'Si','0'=>'No'),array('separator'=>' ','labelOptions'=>array('style'=>'display:inline'))); ?>
 		<?php echo $form->error($model,'tres'); ?>
 		<p><b><pre>       3.1 En caso de respuesta positiva, por favor indicanos cuales?<b/></br>
-		<?php echo $form->textField($model,'tres_uno',array('size'=>74,'maxlength'=>300, 'width'=> 20)); ?>
+		<?php echo $form->textField($model,'tres_uno',array('size'=>74,'maxlength'=>300, 'width'=> 20,'style'=>'text-transform: uppercase')); ?>
 		<?php echo $form->error($model,'tres_uno'); ?></p></pre>
 	</div>
 &nbsp
@@ -91,6 +91,11 @@
 		<?php echo $form->radioButtonList($model,'diez',array('1'=>'Si','0'=>'No'),array('separator'=>' ','labelOptions'=>array('style'=>'display:inline'))); ?>		
 		<?php echo $form->error($model,'diez'); ?>
 	</div>
+&nbsp
+
+<div class="row">
+<p><b>GRACIAS POR SU TIEMPO!!!<b/></br></p>
+</div>
 &nbsp
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ?'Guardar' : 'Save'); ?>

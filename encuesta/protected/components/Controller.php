@@ -20,4 +20,10 @@ class Controller extends CController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
+	
+	public function __construct($id,$model=null)
+	{
+		parent::__construct($id,$model);
+		Yii::app()->language=isset($_GET['lg'])?$_GET['lg']:Yii::app()->language;
+	}
 }

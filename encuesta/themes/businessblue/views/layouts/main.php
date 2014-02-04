@@ -30,7 +30,7 @@
 		'id'=>'topnav',
       		'items'=>array(
             		array('label'=>'Inicio de Sesión', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                   	array('label'=>'Bienvenida', 'url'=>array('/site/index'),'visible'=>Yii::app()->user->isGuest),
+                   	array('label'=>'Encuesta', 'url'=>array('/site/index'),'visible'=>Yii::app()->user->isGuest),
                     	array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest,
 				'items'=>array(
 					array('label'=>'Administrar', 'url'=>array('/usuario/admin')),
@@ -125,8 +125,6 @@
     <div class="footbox">
       <h2>Instituciones involucradas: </h2>
       <ul>
-        <li><a href="http://www.ascun.org.co">&raquo; Asociación Colombiana de Universidades</a></li>
-        <li><a href="http://www.icbf.gov.co">&raquo; Instituto Colombiano de Bienestar Familiar</a></li>
         <li><a href="http://www.sanmartin.edu.co">&raquo; Fundación Universitaria San Martín</a></li>
         <li class="last"><a href="ihttp://www.google.com.co">&raquo;  </a></li>
       </ul>
@@ -148,11 +146,12 @@
 <!-- ####################################################################################################### -->
 <div class="wrapper col6">
   <div id="copyright">
-    <p class="fl_left">Copyright &copy; 2013 ASCUN - ICBF - Todos los Derechos Reservados - <a href="#">Domain Name</a></p>
+    <p class="fl_left">Copyright &copy; - Todos los Derechos Reservados - <a href="#">Domain Name</a></p>
     <p class="fl_right">Template by : <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p></br>
     <p class="fl_right">Powered by : <a href="http://www.yiiframework.com" title="Yii Framework">Yii Framework </a></p></br>
     <p class="fl_right">Powered by : <a href="http://www.mysql.com" title="MySQL">MySQL</a></p></br>
     <p class="fl_right">Powered by : <a href="http://www.php.net" title="PHP5">PHP5</a></p></br>
+    <p class="fl_right">Powered by : <a href="http://www.consoltic.co" title="PHP5">CONSOLTIC</a></p></br>
     <br class="clear" />
   </div>
 </div>

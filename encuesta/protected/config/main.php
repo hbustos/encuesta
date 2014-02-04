@@ -8,6 +8,9 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Encuesta "Software para la Construcción de la Política de un S.G.S.I."',
+	'language'=>'es',
+	'sourceLanguage'=>'en',
+	'charset'=>'utf-8',
 	
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -25,7 +28,7 @@ return array(
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'cangrejo',
+			'password'=>'C4ngr3j036.',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
@@ -62,6 +65,13 @@ return array(
 			'charset' => 'utf8',
 		),
 		
+		'coreMesseges'=>array(
+			'basePath'=>'protected/messages',
+		),
+		//--TRADUCCION DE MENSAJES--
+		'messages'=>array(
+			'onMissingTranslation'=>array('HMessages','getNecesitoTraduccion'),
+		),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
@@ -87,6 +97,11 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'hfb5@hotmail.com',
+		'slogan'=>'"Software para la Construcción de la Política de un S.G.S.I."',
+		'adminTel'=>'',
+		'tituloProyecto'=>'S.G.S.I.',
+		'direccionProyecto'=>'',
+		'paisProyecto'=>'Bogotá - Colombia',		
 	),
 );
